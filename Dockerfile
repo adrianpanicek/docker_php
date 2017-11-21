@@ -18,7 +18,7 @@ RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini \
  && echo "max_execution_time=-1" > $PHP_INI_DIR/conf.d/max_execution_time.ini
 
 # Install required system packages
-RUN apk --no-cache --update add curl git gcc openssh openssl zlib-dev autoconf tar openldap-dev alpine-sdk libxml2
+RUN apk --no-cache --update add curl git gcc openssh openssl zlib-dev autoconf tar openldap-dev alpine-sdk libxml2-dev
 
 # Install php dependencies
 RUN docker-php-ext-install pdo pdo_mysql ldap pcntl bcmath soap
